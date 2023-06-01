@@ -1,0 +1,166 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+body {
+    background-color: blanchedalmond;
+
+}
+
+#h1Div {
+    height: 50%;
+    background-color: blue;
+    position: relative;
+    min-height: 150px;
+    
+}
+
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 75px;
+    text-align: left;
+    margin-top: 0%;
+    color: blanchedalmond;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+}
+
+#machineTitle {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+form {
+    margin-top: 40px;
+    padding-top: 1%;
+    font-size: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 5%;
+    border-style: solid;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+#topline {
+    width: 200px;
+}
+
+#bottomline {
+    width: 200px;
+}
+
+#submitMeme {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#submitMeme:hover {
+    cursor:pointer;
+    background-color: cornflowerblue;
+}
+
+.topText, .bottomText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.topText {
+    color: white;
+    /* taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text4 */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: absolute; 
+    font-size: 2vw;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 0px; 
+
+}
+.bottomText {
+    color: white;
+    /* taken from https://stackoverflow.com/questions/4919076/outline-effect-to-text4 */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: absolute;
+    font-size: 2vw;
+    left: 50%;
+    top: 80%;
+    /*https://www.w3schools.com/cssref/css3_pr_transform.php*/
+    transform: translate(-50%, -50%);
+    /* end https://www.w3schools.com/cssref/css3_pr_transform.php */
+    z-index: 1;
+    text-align: center;
+    margin: 10;
+    padding: 0px;
+}
+
+.memeImgClass {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    z-index: -1;
+    transition: .5s ease;
+    margin-top: 10px;
+}
+
+.parentDiv {
+    display: inline-block;
+    position: relative;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+.memeImgClass:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+    background-color: pink;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.hide:hover {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 1%;
+    background-color: bisque;
+    left: 80%;
+    
+}
+
+/*modified from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_display_element_hover*/
+.memeImgClass:hover + .hide {
+    display: initial;
+    position: absolute;
+    top: 1%;
+    left: 80%;
+    }
+
+
