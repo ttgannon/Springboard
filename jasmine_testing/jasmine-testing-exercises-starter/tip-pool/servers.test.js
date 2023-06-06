@@ -12,8 +12,6 @@ describe("Servers test (with setup and tear-down)", function() {
   });
 
   afterEach(function() {
-    serverId = 0;
-    serverTbody.innerHTML = '';
-    allServers = {};
+    // teardown logic
   });
 });
