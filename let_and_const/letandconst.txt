@@ -1,0 +1,30 @@
+var PI = 3.14;
+PI = 42; // stop me from doing this!
+
+instead:
+
+const PI = 3.14;
+//prevents reassignment
+
+const myName = Gavin;
+function write(something) {
+    console.log(something);
+}
+
+write(myName);
+
+
+What is the difference between var and let?
+    Var is older from pre-ES2015 era. It exists as a variable on the window object and is available globally. It can be both
+    redeclared and reassigned, which can be confusing. Variables are also hoisted. 
+
+What is the difference between var and const?
+    Const is the same as let (which was described above), except primitive data types declared with 
+    const cannot be reassigned, while those declared using let (and of course, var) can. 
+
+What is the difference between let and const?
+    By the transitive property, I have already answered this question. 
+
+what is hoisting?
+    Hoisting happens with variables declared using var: those declarations are compiled first, giving the browser an awareness
+    of the variable in question, even if it is not yet defined in the codebase. It would return undefined instead of generating an error.
