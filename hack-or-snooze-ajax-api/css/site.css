@@ -60,10 +60,10 @@ form > * {
 form label {
   font-size: 0.9rem;
   font-weight: 700;
-  display: inline-block;
+  display:flex;
   width: 3.5rem;
   text-align: right;
-  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 form input {
@@ -91,6 +91,7 @@ form > button {
   color: white;
   cursor: pointer;
   transition: all 0.15s;
+  white-space: nowrap;
 }
 
 form > button:hover {
@@ -105,6 +106,20 @@ form > hr {
 .login-input label {
   width: 70px;
 }
+
+.story-input label {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+#submit-story-Btn {
+  width: 10rem;
+  white-space: nowrap;
+}
+
+
+
+
 
 
 /* responsive queries for tightening things up for mobile. */
