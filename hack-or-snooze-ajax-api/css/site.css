@@ -117,9 +117,33 @@ form > hr {
   white-space: nowrap;
 }
 
+div {
+  margin-left: 5px;
+  margin-top: 10px;
+}
 
+i {
+  color: black;
+}
 
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: grey;
+}
 
+.story-user {
+  color: rgb(255, 187, 0);
+  padding-left: 0px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.story-author {
+  color: green;
+  margin-left: 20px !important;
+  margin-top: 5px;
+}
 
 
 /* responsive queries for tightening things up for mobile. */

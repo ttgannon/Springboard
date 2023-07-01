@@ -93,6 +93,19 @@ class StoryList {
     user.ownStories.unshift(story);
     return story;
   }
+
+
+  async removeStory(user, storyId) {
+    const token = user.loginToken;
+    await axios({
+      url: `${BASE_URL}/stories/${storyId}`,
+      method: "DELETE",
+      data: { token }
+    });
+    this.stories = this.stories.filter(sto=>sto.storyId !== storyId);
+    user.favorites = user.favorites.filter(sto => sto.storyId !== storyId);
+    
+  }
 }
 
 
@@ -210,4 +223,35 @@ class User {
       return null;
     }
   }
+
+
+
+  //Adding and removing stories from favorites 
+  async addFavorite (story) {
+    this.favorites.push(story);
+    console.log(this.favorites);
+    await this.addOrRemoveFavorite("add", story);
+  }
+
+  async removeFavorite(story) {
+    this.favorites = this.favorites.filter(sto => sto.storyId !== story.storyId);
+    await this.addOrRemoveFavorite("remove", story);
+  }
+
+  async addOrRemoveFavorite(action, story) {
+    const method = action === "add" ? "POST" : "DELETE";
+    const token = this.loginToken;
+    await axios({
+      url: `${BASE_URL}/users/${this.username}/favorites/${story.storyId}`,
+      method: method,
+      data: { token },
+    });
+  }
+  isFavorite(story) {
+    return this.favorites.some(sto=>(sto.storyId === story.storyId));
 }
+
+
+
+}
+

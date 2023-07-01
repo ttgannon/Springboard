@@ -39,9 +39,43 @@ function updateNavOnLogin() {
 /** show submit new story form on clicking navbar */
 
 function submitNewStory(evt) {
-  console.log("you clicked");
   console.debug("submitNewStory", evt)
   hidePageComponents();
   $submitStoryForm.show();
 }
 $navSubmitStory.on("click", submitNewStory);
+
+
+function navFavoritesClick(evt) {
+  console.debug("navFavoritesClick", evt);
+  hidePageComponents();
+  putFavoritesListOnPage();
+}
+$body.on("click", "#nav-favorite-stories", navFavoritesClick);
+
+function navMyStories(evt) {
+  console.debug("navMyStories", evt);
+  hidePageComponents();
+  putUserStoriesOnPage();
+}
+
+$body.on("click", "#nav-my-stories", navMyStories);
+
+function navLoginClick(evt) {
+  console.debug("navLoginClick", evt);
+  hidePageComponents();
+  $loginForm.show();
+  $signupForm.show();
+  $storiesContainer.hide()
+}
+
+$navLogin.on("click", navLoginClick);
+
+function navProfileClick(evt) {
+  console.debug("navProfileClick", evt);
+  hidePageComponents();
+  $userProfile.show();
+}
+
+$navUserProfile.on("click", navProfileClick);
+

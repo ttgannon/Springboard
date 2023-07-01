@@ -40,6 +40,8 @@
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-Submit-Story">submit new story</a>
+    <a class="nav-link" href="#" id="nav-favorite-stories">favorites</a>
+    <a class="nav-link" href="#" id="nav-my-stories">my stories</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
   </div>
@@ -53,6 +55,7 @@
 
   <!-- List of all stories -->
   <ol id="all-stories-list" class="stories-list"></ol>
+  
 
 </section>
 
@@ -91,6 +94,14 @@
     </div>
     <button type="submit" id="submit-story-Btn">Submit Story</button>
   </form>
+
+<!--Favorites list-->
+  <ol class="all-stories-list" id="favoriteStoriesList">
+  </ol>
+<!--My stories list-->
+    <ol class="my-stories-list" id="myStories">
+    </ol>
+
 
   <!-- Signup form -->
   <form
