@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% block title %}Movies{% endblock %}
+{% block content %}
+
+<h1>All Movies</h1>
+<!-- get_flashed_messages is an item with flashed messages set in app.py in the route -->
+
+<ul>
+    {% for movie in movies %}
+    <li>{{ movie }}</li>
+    {% endfor %}
+</ul>
+
+<form action="/movies/new" method="POST">
+    <input type="text" placeholder="movie title" name="title">
+    <button>submit</button>
+</form>
+
+{% endblock %}

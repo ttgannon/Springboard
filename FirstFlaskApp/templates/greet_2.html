@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block title %}Greeter V2{% endblock %}
+{% block content %}
+    <h1>hi there, {{ username }}!</h1>
+    {% if wants_compliments %}
+    <h2>ok, here are compliments:</h2>
+    <ul>
+        {% for i in nice_words %}
+        <li>{{i}}</li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+</body>
+</html>
+
+{% endblock %}
